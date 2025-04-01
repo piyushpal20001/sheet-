@@ -1,45 +1,47 @@
 {% extends 'layouts/app.html' %}
+{% load static %}
 
-{%  block content %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" 
+     style="min-height: 100vh; background: url('https://plus.unsplash.com/premium_photo-1677187301535-b46cec7b2cc8?q=80&w=2123&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center; background-size: cover;">
+    
+    <div class="col-sm-4 p-4  rounded shadow">
+        <h2 class="text-black-bold text-center">Login 📖</h2>
 
-
-<div class="row justify-content-center">
-    <div class="col-sm-6">
-        <h2 class ="text-muted">Login📖</h2>
-
-          
         {% if form.non_field_errors %}
-        <small class="text-danger">
-            {{ form.non_field_errors.as.ul }}
+        <small class="text-danger d-block text-center">
+            {{ form.non_field_errors.as_ul }}
         </small>
         {% endif %}
-         
-        
-        <form method="POST" action ="{% url 'login' %}">
+
+        <form method="POST" action="{% url 'login' %}">
             {% csrf_token %}
 
-        <div class="form-group">
-            <label for="{{ form.username.id_for_label}}">Username:</label>
-            <input type="Password" name="{{ form.username.name}}" class="form-control" value="{{form.username.value}}" />
-            <span class="text-danger">{{ form.username.errors }}</span>
-        </div>
+            <div class="form-group">
+                <label for="{{ form.username.id_for_label }}" class="text-black">Username :</label>
+                <input type="text" name="{{ form.username.name }}" class="form-control text-black"
+                value="{{ form.username.value|default_if_none:'' }}" aria-label="Username"
+                placeholder="Enter Your Username" required />
+                <span class="text-danger text-black">{{ form.username.errors }}</span>
+            </div>
 
-        
-        <div class="form-group">
-            <label for="{{ form.password.id_for_label}}">Password🔐:</label>
-            <input type="Password" name="{{ form.password.name}}" class="form-control" value="{{form.password.value}}" />
-            <span class="text-danger">{{ form.password.errors }}</span>
-        </div>
-        
-        
-        
-        <button type="submit" class="btn btn-dark">Login✔️</button>
-        <a href="{% url 'register' %}"class="btn btn-default">Create a new account</a>
-        <a href="{% url 'forget_password' %}">Forgot Password?</a>
+            <div class="form-group">
+                <label for="{{ form.password.id_for_label }}" class="text-black" >Password 🔐:</label>
+                <input type="password" name="{{ form.password.name }}" class="form-control"
+                       value="{{ form.password.value }}" aria-label="Password" 
+                        placeholder="Enter Your Password" required />
+                <span class="text-danger">{{ form.password.errors }}</span>
+            </div>
 
+            <div class="text-center">
+                <button type="submit" class="btn btn-dark">Login ✔</button>
+            </div>
 
+            <div class="text-center mt-3">
+                <a href="{% url 'register' %}" class="btn btn-secondary">Create a New Account</a>
+                <a href="{% url 'forget_password' %}" class="text-primary d-block mt-2">Forgot Password?</a>
+            </div>
         </form>
     </div>
 </div>
-
 {% endblock %}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet</title>
+    <link rel="stylesheet" href="yotube.css">
+</head>
+<body>
+    <div class="container">
+        <form id="contactForm" aria-autocomplete="off" method="post" name="google-sheet">
+            <h3>Contact Us</h3>
+            <input type="text" placeholder="Type Your Name Here 📑" name="name" required>
+            <input type="email" placeholder="Type Your Email 📧" name="email" required>
+            <input type="text" placeholder="Type Your Number 🔢" name="number" required>
+            <select name="option" required>
+                <option value="Not Selected">Select An Option</option>
+                <option value="MCA">MCA</option>
+                <option value="BTECH">BTECH</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+            <textarea rows="4" placeholder="How we can help?" name="message" required></textarea>
+            <button type="submit" name="submit">Submit</button>
+            
+        </form>
+
+        <!-- Thank You Message Div -->
+        <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+            Thank you for submitting your form!
+        </div>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyk1R7f1FssvjoS7KE8hkRm1OwYzaOn3d0TawOWYgu7DK1bwhWuO67GaqLF6Rh10cxP/exec';
+        const form = document.getElementById('contactForm');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            // Submit form data to Google Sheets
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    // Show alert
+                    alert("Thanks for contacting us! We will reach out to you soon.");
+                    
+                    // Hide form & show thank you message
+                    form.style.display = 'none';
+                    thankYouMessage.style.display = 'block';
+
+                    // Reset form (optional)
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+   
+    </script>
+</body>
+</html>

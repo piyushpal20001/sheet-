@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #fceff9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+        }
+        
+        header {
+            background-color: #6a0572;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #eec6eff6;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg,  #fceff9 0%, #6a0572 100%);
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            background-color: #f1c7f1f6;
+            color: #333;
+            transform: scale(1.05);
+        }
+
+        button, .read-more-btn {
+            background-color: #8e44ad; /* Rich purple color */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover, .read-more-btn:hover {
+            background-color: #9b59b6; /* Slightly lighter purple on hover */
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+       <!-- Navigation -->
+       <header>
+        <nav style="display: block;  ">
+            <div class="menu" style="display: block;">
+                <a href="/new.html" style="color: white; text-decoration: none; padding: 10px ;">🏠 Home</a>
+                <a href="/services.html" style="color: white; text-decoration: none; padding: 10px ;">🛎 Services</a>
+                <a href="/about.html" style="color: white; text-decoration: none; padding: 10px ;">📖 About</a>
+                <a href="/contact.html" style="color: white; text-decoration: none; padding: 10px ;">📬 Contact</a>
+                <a href="/shop.html" style="color: white; text-decoration: none; padding: 10px ;">🛒 Shop</a>
+                <a href="/login.html" style="color: white; text-decoration: none; padding: 10px;">🔑 Login with us</a>
+              </div>
+            
+              <nav style="display: block; justify-content: space-between; align-items: center;">
+        </nav>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Book Services</h1>
+            <p class="text-xl mb-8">Connecting Readers, Empowering Knowledge</p>
+        </div>
+    </section>
+
+    
+    
+    <!-- Services Grid -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8" id="servicesContainer">
+                <!-- Predefined Services -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
+                    <div class="text-5xl mb-4 service-icon">📕</div>
+                    <h3 class="text-xl font-semibold mb-3">Buy Book</h3>
+                    <p class="text-gray-600 mb-4">Explore a wide range of books across different genres. From fiction to self-help, we have everything you need to expand your reading collection.</p>
+                    <a href="/buy.html" class="read-more-btn inline-block px-4 py-2 rounded hover:bg-purple-700 transition duration-300">
+                        Read More
+                    </a>
+                </div>
+
+                <div class="service-card bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
+                    <div class="text-5xl mb-4 service-icon">📘</div>
+                    <h3 class="text-xl font-semibold mb-3">Sell Book</h3>
+                    <p class="text-gray-600 mb-4">Have books you no longer need? Sell them on Kitabi Duniya and give them a second life. Connect with readers who are looking for your pre-loved books.</p>
+                    <a href="/sell.html" class="read-more-btn inline-block px-4 py-2 rounded hover:bg-purple-700 transition duration-300">
+                        Read More
+                    </a>
+                </div>
+
+                <div class="service-card bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
+                    <div class="text-5xl mb-4 service-icon">📗</div>
+                    <h3 class="text-xl font-semibold mb-3">Rent Book</h3>
+                    <p class="text-gray-600 mb-4">Not ready to commit to a purchase? Rent your favorite titles at affordable prices. Enjoy reading without the long-term commitment.</p>
+                    <a href="/rent.html" class="read-more-btn inline-block px-4 py-2 rounded hover:bg-purple-700 transition duration-300">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="bg-white py-16 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-6">Ready to Start Your Reading Journey?</h2>
+            <p class="text-xl mb-8">Connect with us and unlock a world of books!</p>
+            <a href="/yotube.html" class="read-more-btn inline-block px-4 py-2 rounded hover:bg-purple-700 transition duration-300">
+                contact us
+            </a>
+        </div>
+    </section>
+    
+    <script>
+        function toggleMenu() {
+          const menu = document.querySelector('.menu');
+          const hamburger = document.querySelector('.hamburger');
+          if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+          } else {
+            menu.style.display = 'flex';
+            menu.style.flexDirection = 'column';
+            menu.style.width = '100%';
+          }
+        }
+    
+        function adjustMenu() {
+          const menu = document.querySelector('.menu');
+          const hamburger = document.querySelector('.hamburger');
+          if (window.innerWidth <= 600) {
+            hamburger.style.display = 'block';
+            menu.style.display = 'none';
+          } else {
+            hamburger.style.display = 'none';
+            menu.style.display = 'flex';
+          }
+        }
+    
+        window.onload = adjustMenu;
+        window.onresize = adjustMenu;
+      </script>
+   
+    
+</body>
+</html>

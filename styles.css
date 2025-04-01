@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffbf2;
+    color: #333;
+}
+
+header {
+    background-color: #6a0572;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color:  #eec6eff6;;
+}
+
+#hero {
+    background-image: url('https://png.pngtree.com/back_origin_pic/03/88/19/883f1b0ddd7c6f341e3357fd964b2bfa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: left;
+    padding: 100px 20px;
+
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #efe8ef;
+    color:rgb(17, 1, 1);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #6a0572;
+    transform: scale(1.1);
+}
+
+/* Services Section */
+#services {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fceff9;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #6a0572;
+    color: white;
+    padding: 40px 60px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+    flex: 1 1 calc(25% - 40px);
+    min-width: 250px;
+}
+
+.service-card:hover {
+    background-color: #eec6eff6;
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* About Section */
+#about {
+    background-color: #fff3e0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    color: #6a0572;
+    
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+}
+
+/* Contact Form */
+#contact {
+    background-color: #f7e9f0;
+    padding: 60px 20px;
+    text-align: center;
+    
+}
+
+#contact h2 {
+    color: #6a0572;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #6a0572;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #eec6eff6;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #6a0572;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #hero {
+        padding: 60px 20px;
+    }
+
+    .service-card {
+        flex: 1 1 calc(50% - 40px);
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        flex: 1 1 100%;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Scroll Up Button */
+#scrollUpBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 80px; /* Above the footer */
+    right: 20px; /* Positioned on the right */
+    background-color: #6a0572;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollUpBtn:hover {
+    background-color: #eec6eff6;
+    color: #333;
+    transform: scale(1.1);
+}
+
+
+.social-media {
+    margin-top: 10px;
+  }
+  
+  .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-media a:hover {
+    color: #00bcd4; /* Light blue on hover */
+}

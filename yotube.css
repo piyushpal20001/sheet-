@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #d4b5ff; /* Light purple background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(98, 0, 234, 0.2); /* Slightly transparent purple */
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+form {
+    width: 100%;
+}
+
+h3 {
+    color: black; /* Changed to black */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    position: relative;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: black; /* Changed to black */
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.5); /* Lighter background for better contrast */
+    color: black; /* Changed to black */
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(0, 0, 0, 0.6); /* Changed to black with opacity */
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #6200ea;
+    box-shadow: 0 0 8px rgba(98, 0, 234, 0.3);
+}
+
+select {
+    color: black; /* Changed to black */
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+}
+
+select option {
+    background: white;
+    color: black; /* Changed to black */
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #8a2be2;
+    color: white; /* Keeping button text white for contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s;
+    position: relative;
+}
+
+button::after {
+    content: 'Submit';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button:hover {
+    background: #9b4dff;
+}
+
+/* Style for the thank you message */
+.thank-you-message {
+    display: none;
+    background: rgba(255, 255, 255, 0.5);
+    color: black; /* Changed to black */
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    input, select, textarea, button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
